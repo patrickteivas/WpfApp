@@ -24,5 +24,66 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Liida(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CalculationResult.Content = int.Parse(FirstNumber.Text) + int.Parse(SecondNumber.Text);
+            }
+            catch (System.FormatException)
+            {
+                CalculationResult.Content = "Vale sisestus";
+            }
+            catch (System.OverflowException)
+            {
+                CalculationResult.Content = "Liiga suur number";
+            }
+        }
+        private void Lahuta(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CalculationResult.Content = int.Parse(FirstNumber.Text) - int.Parse(SecondNumber.Text);
+            }
+            catch (System.FormatException)
+            {
+                CalculationResult.Content = "Vale sisestus";
+            }
+            catch (System.OverflowException)
+            {
+                CalculationResult.Content = "Liiga suur number";
+            }
+        }
+        private void Korruta(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CalculationResult.Content = int.Parse(FirstNumber.Text) * int.Parse(SecondNumber.Text);
+            }
+            catch (System.FormatException)
+            {
+                CalculationResult.Content = "Vale sisestus";
+            }
+            catch (System.OverflowException)
+            {
+                CalculationResult.Content = "Liiga suur number";
+            }
+        }
+        private void Jaga(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CalculationResult.Content = int.Parse(FirstNumber.Text) / int.Parse(SecondNumber.Text);
+            }
+            catch (System.FormatException)
+            {
+                CalculationResult.Content = "Vale sisestus";
+            }
+            catch (System.OverflowException)
+            {
+                CalculationResult.Content = "Liiga suur number";
+            }
+        }
     }
 }
