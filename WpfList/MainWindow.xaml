@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Margin="10">
-        <ListBox Name="TodoListBox" HorizontalAlignment="Left" Width="348" SelectionChanged="todoListBox_SelectionChanged">
+        <ListBox Name="TodoListBox" HorizontalAlignment="Left" Width="348" SelectionMode="Multiple" SelectionChanged="todoListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">

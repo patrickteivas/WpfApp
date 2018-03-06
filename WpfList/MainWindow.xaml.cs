@@ -35,13 +35,18 @@ namespace WpfList
 
         private void todoListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Title = (TodoListBox.SelectedItem as TodoItem).Title;
+            if (TodoListBox.SelectedItem != null)
+            {
+                Title = (TodoListBox.SelectedItem as TodoItem).Title;
+            }
         }
 
         private void btnShowSelectedItem_Click(object sender, RoutedEventArgs e)
         {
-            if (TodoListBox.SelectedItem != null)
+            foreach(var item in TodoListBox.SelectedItems)
+            {
                 MessageBox.Show((TodoListBox.SelectedItem as TodoItem).Title);
+            }
         }
 
         private void btnSelectLast_Click (object sender, RoutedEventArgs e)
